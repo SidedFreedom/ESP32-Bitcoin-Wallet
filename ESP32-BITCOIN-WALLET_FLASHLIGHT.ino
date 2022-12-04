@@ -1,7 +1,5 @@
 //to do
 // EMF Detector
-// SD failures for Generate Wallet + Fingerprint confirmation
-// 
 
 #define uS_TO_S_FACTOR 1000000  /* Conversion factor for micro seconds to seconds */
 #define TIME_TO_SLEEP  5        /* Time ESP32 will go to sleep (in seconds) */
@@ -333,6 +331,7 @@ Serial.println(root);
 Serial.println(root.fingerprint());
 Serial.println(account);
 Serial.println(account.xpub());
+
 
 
 HDPublicKey xpub = account.xpub();
@@ -809,11 +808,13 @@ void signthis()
             PHRS = finalfinal.c_str();
             finalString="";
             strlength=0;
+
             
             root = HDPrivateKey(PHRS,"");
             HDPrivateKey account = root.derive("m/84'/0'/0'");
             Serial.println(root);
             Serial.println(root.fingerprint());
+            finger = root.fingerprint();
             Serial.println(account);
             Serial.println(account.xpub());
             
@@ -827,8 +828,12 @@ void signthis()
   delay(100);
   display.clearBuffer();
   display.setTextSize(1);
-  testdrawtext("Step 1: Remove SD card with Recovery Phrase\n\n\Step 2: Press Top Left Button to continue", COLOR1);
+  String fingers = "\nCheck Fingerprint for Verification:  "+finger+"\n\nStep 1: Remove SD card with Recovery Phrase\n\n\Step 2: Press Top Left Button to continue";
+  const char* fingersconst = fingers.c_str();
+  testdrawtext(fingersconst, COLOR1);
   display.display();
+
+  fingers = "";
 
   countdown = 1100;
   while (countdown >= 0)
