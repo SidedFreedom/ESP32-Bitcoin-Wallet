@@ -1085,9 +1085,9 @@ void EMF()
 
 countdown = 1100;
   while (countdown >= (300))
-  {delay(100); pixels.setPixelColor(0, pixels.Color(255,255,255));pixels.show();if ( digitalRead(BUTTONA) == LOW){countdown = 1100;} if ( digitalRead(BUTTONC) == LOW){{pixels.setPixelColor(0, pixels.Color(0,0,0));pixels.show();loop();}} --countdown;};
+  {delay(100); pixels.setPixelColor(0, pixels.Color(255,255,255));pixels.show();if ( digitalRead(BUTTONA) == LOW){EMF();} if ( digitalRead(BUTTONC) == LOW){{pixels.setPixelColor(0, pixels.Color(0,0,0));pixels.show();loop();}} --countdown;};
   while (countdown >= (0))
-  {delay(100); pixels.setPixelColor(0, pixels.Color(255,0,0));pixels.show();if ( digitalRead(BUTTONA) == LOW){countdown = 1100;} if ( digitalRead(BUTTONC) == LOW){{pixels.setPixelColor(0, pixels.Color(0,0,0));pixels.show();loop();}} --countdown;};
+  {delay(100); pixels.setPixelColor(0, pixels.Color(255,0,0));pixels.show();if ( digitalRead(BUTTONA) == LOW){EMF();} if ( digitalRead(BUTTONC) == LOW){{pixels.setPixelColor(0, pixels.Color(0,0,0));pixels.show();loop();}} --countdown;};
 
 countdown = 1100;
 pixels.setPixelColor(0, pixels.Color(0,0,0));pixels.show();
