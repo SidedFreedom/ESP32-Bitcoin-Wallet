@@ -13,7 +13,7 @@
 Adafruit_NeoPixel pixels(1, PIN_NEOPIXEL);
 int led = LED_BUILTIN;
 
-#include <bootloader_random.h> //necessary for true random number generator - brings in entropy from WIFI, but shuts off after random numbers are generated
+#include <bootloader_random.h> //necessary for true random number generator - brings in entropy from analog noise readings/WIFI/Bluetooth, but shuts off after random numbers are generated
 #include <Bitcoin.h>
 #include <PSBT.h>
 #include <qrcoderm.h> //CRITICAL see instructions for renaming files here or QR code will not work https://github.com/ricmoo/QRCode/issues/35#issuecomment-1179311130
