@@ -1,6 +1,11 @@
 //to do
 // EMF Detector
 
+//esp32 only
+//Many thanks to Limor Fried/LadyAda, ricmoo, stepansnigirev and my anonymous friend for their information and help
+
+//Obviously you need to install libraries like ricmoo's qrcode, uBitcoin, SdFat (not the forks), and various Adafruit libraries for this to work
+
 #define uS_TO_S_FACTOR 1000000  /* Conversion factor for micro seconds to seconds */
 #define TIME_TO_SLEEP  5        /* Time ESP32 will go to sleep (in seconds) */
 
@@ -294,6 +299,17 @@ randomchoice = random(1,13);
 
 }
 ///////////////////////////////////////////////////////////////////////////////////////////// SUBMENUS
+void strobe()
+{
+countdown = 1100;
+  while (countdown >= (300))
+  {delay(100); pixels.setPixelColor(0, pixels.Color(255,255,255));pixels.show();delay(100); pixels.setPixelColor(0, pixels.Color(0,0,0));pixels.show();if ( digitalRead(BUTTONB) == LOW){strobe();} if ( digitalRead(BUTTONC) == LOW){{pixels.setPixelColor(0, pixels.Color(0,0,0));pixels.show();loop();}} --countdown;};
+  while (countdown >= (0))
+  {delay(100); pixels.setPixelColor(0, pixels.Color(255,0,0));pixels.show();pixels.show();delay(100); pixels.setPixelColor(0, pixels.Color(0,0,0));pixels.show();if ( digitalRead(BUTTONB) == LOW){strobe();} if ( digitalRead(BUTTONC) == LOW){{pixels.setPixelColor(0, pixels.Color(0,0,0));pixels.show();loop();}} --countdown;};
+
+}
+
+
 void generate_wallet()
 {
   const uint8_t pklen = 32;
