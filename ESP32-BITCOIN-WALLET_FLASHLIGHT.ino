@@ -2,7 +2,7 @@
 // EMF Detector
 
 //esp32 only
-//Many thanks to Limor Fried/LadyAda, ricmoo, stepansnigirev and my anonymous friend for their information and help
+//Many thanks to Limor Fried/LadyAda, ricmoo, but especially to Stepan Snigirev and my anonymous friend for their information and help
 
 //Obviously you need to install libraries like ricmoo's qrcode, uBitcoin, SdFat (not the forks), and various Adafruit libraries for this to work
 
