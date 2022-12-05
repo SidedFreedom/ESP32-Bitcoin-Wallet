@@ -13,7 +13,7 @@ Make sure you also view Adafruit for basic instructions on installing libraries 
     
     1) An airgapped PSBT signer
     
-    2) An airgapped Bitcoin Wallet generator with code to save to SD card (optional) or print via a thermal printer (optional)
+    2) An airgapped Bitcoin Wallet generator with code to save to SD card (optional) and print via a thermal printer (optional)
     
     3) A flashlight with an optional strobe function
     
