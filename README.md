@@ -26,6 +26,6 @@ Note that this version's code includes SD and Thermal Printing, but if you know 
 
 # Coming in the Future:
 
-• EMF Detector in place of the Flashlight.
+• EMF Detector in place of the Flashlight (in beta as of 12.9.22).
 
-• A 3D Printer File for a Case: 
+• A 3D Printer File for a Case (still in design phase).
