@@ -20,7 +20,7 @@ Make sure you also view Adafruit's website for basic instructions on installing 
     3) A flashlight with an optional strobe function
     
 
-Note that this version's code includes SD and Thermal Printing, but if you know what you are doing, you can comment that out of the code for a faster experience.
+Note that this version's code includes SD and Thermal Printing, but if you know what you are doing, you can comment that out of the code for a faster experience if you don't need those features.
 
 
 
